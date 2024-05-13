@@ -13,5 +13,6 @@ test("@Functional gbv", async ({ browser }) => {
   await password.fill("Test@123");
   await login.click();
   await page.locator("[type='submit']").click();
+  console.log("hello");
   await page.pause();
 });
