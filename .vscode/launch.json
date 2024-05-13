@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "https://rahulshettyacademy.com/client/dashboard/myorders",
+            "request": "launch",
+            "url": "https://rahulshettyacademy.com/client/dashboard/myorders"
+        }
+    ]
+}
