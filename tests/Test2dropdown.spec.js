@@ -16,6 +16,7 @@ test("@Smoke dropdowns", async ({ browser }) => {
   await radiobutton.click();
   await expect(radiobutton).toBeChecked();
   await popup.click();
+  console.log("Testing1");
   //adding assertion using expect method.
   //we are adding assertion to check if the required radio button is selected
   //we are using "to be checked method" to check if the radio button is selected
