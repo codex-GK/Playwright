@@ -30,5 +30,7 @@ test("@Smoke browserContextPlayWrightTest", async ({ browser }) => {
   console.log(await cardtitles.nth(0).textContent());
   console.log(await cardtitles.allTextContents());
   console.log("Testing");
+  console.log("Testing-1");
+
   await page.pause();
 });
