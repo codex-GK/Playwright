@@ -58,6 +58,7 @@ test("@Regression Testingcart", async ({ page }) => {
 
       break;
     }
+    console.log("regression-commit");
   }
   await page.pause();
 });
