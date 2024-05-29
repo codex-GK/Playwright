@@ -22,10 +22,10 @@ const config = {
   use: {
     browserName: "chromium",
 
-    headless: true,
+    headless: false,
     //headless: true,
     screenshot: "on",
-    trace: "on",
+    trace: "retain-on-failure",
 
     //browserName : 'webkit'
   },
