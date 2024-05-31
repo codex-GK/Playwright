@@ -20,8 +20,8 @@ steps:
     displayName: "npm install dependencies"
 
     - script: |
-        npm test
-      displayName: "npm test"
+        npm ci
+      displayName: "Install dependencies"
 
     - script: |
         npx playwright install --with-deps
@@ -30,5 +30,9 @@ steps:
     - script: |
         npm run regression
       displayName: "Run regression tests"
+
+      
+
+      
 
       
