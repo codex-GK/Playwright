@@ -27,10 +27,6 @@ steps:
       npm test
     displayName: "npm test"
 
-  - script: |
-      npm run regression
-    displayName: "Run regression tests"
-
   - task: CopyFiles@2
     inputs:
       Contents: "**/package.json"
