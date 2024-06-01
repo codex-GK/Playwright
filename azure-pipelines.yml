@@ -26,3 +26,14 @@ steps:
   - script: |
       npm run regression
     displayName: "Run regression tests"
+
+  - task: CopyFiles@2
+    inputs:
+      Contents: '**/package.json'
+      TargetFolder: '$(build.artifactstagingdirectory)'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'artifactfile'
+      publishLocation: 'Container'
