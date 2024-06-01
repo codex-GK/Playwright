@@ -24,6 +24,10 @@ steps:
     displayName: "Install Playwright"
 
   - script: |
+      npm install
+    displayName: "npm install dependencies"
+
+  - script: |
       npm test
     displayName: "npm test"
 
