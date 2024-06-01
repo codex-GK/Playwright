@@ -24,8 +24,8 @@ steps:
     displayName: "Install Playwright"
 
   - script: |
-      npm install
-    displayName: "npm install dependencies"
+      npx playwright test
+    displayName: "Run Playwright tests"
 
   - script: |
       npm test
