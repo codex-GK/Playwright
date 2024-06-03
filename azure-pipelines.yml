@@ -24,28 +24,16 @@ steps:
     displayName: "Install Playwright"
 
   - script: |
-      npm test --reporter=html --output=playwright-report
-      ls -la playwright-report
+      npm test
     displayName: "npm test"
 
   - task: CopyFiles@2
     inputs:
       Contents: "**/package.json"
-      TargetFolder: "$(build.artifactstagingdirectory)/package-json"
+      TargetFolder: "$(build.artifactstagingdirectory)"
 
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)/package-json"
-      ArtifactName: "package-json"
-      publishLocation: "Container"
-
-  - task: CopyFiles@2
-    inputs:
-      Contents: "playwright-report/**"
-      TargetFolder: "$(build.artifactstagingdirectory)/playwright-report"
-
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)/playwright-report"
-      ArtifactName: "playwright-report"
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "artifactfile"
       publishLocation: "Container"
