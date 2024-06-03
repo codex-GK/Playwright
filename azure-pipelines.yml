@@ -24,12 +24,8 @@ steps:
     displayName: "Install Playwright"
 
   - script: |
-      npm test
+      npm test --reporter=html --output=playwright-report
     displayName: "npm test"
-
-  - script: |
-      npx playwright test --reporter=html
-    displayName: "Generate Playwright Reports"
 
   - task: CopyFiles@2
     inputs:
