@@ -32,16 +32,27 @@ steps:
     displayName: "npm test"
 
   - script: |
-      ls -R $(build.artifactstagingdirectory)
-    displayName: "List contents of the artifact staging directory"
+      npx playwright test --reporter = html
+    displayName: "Generate Playwright Reports"
 
   - task: CopyFiles@2
     inputs:
       Contents: "**/package.json"
-      TargetFolder: "$(build.artifactstagingdirectory)"
+      TargetFolder: "$(build.artifactstagingdirectory)/package-json"
 
   - task: PublishBuildArtifacts@1
     inputs:
-      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
-      ArtifactName: "artifactfile"
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)/package-json"
+      ArtifactName: "package-json"
+      publishLocation: "Container"
+
+  - task: CopyFiles@2
+    inputs:
+      Contents: "playwright-report/**"
+      TargetFolder: "$(build.artifactstagingdirectory)/playwright-report"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)/playwright-report"
+      ArtifactName: "playwright-report"
       publishLocation: "Container"
