@@ -1,5 +1,5 @@
 const { test, expect } = require("@playwright/test");
-test("@Regression Testingcart", async ({ page }) => {
+test("Testingcart", async ({ page }) => {
   await page.goto("https://rahulshettyacademy.com/client/");
   const email = page.locator("#userEmail");
   const password = page.locator("#userPassword");

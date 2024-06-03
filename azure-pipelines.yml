@@ -28,7 +28,7 @@ steps:
     displayName: "npm test"
 
   - script: |
-      npx playwright test --reporter = html
+      npx playwright test --reporter=html
     displayName: "Generate Playwright Reports"
 
   - task: CopyFiles@2
