@@ -31,6 +31,10 @@ steps:
       npm test
     displayName: "npm test"
 
+  - script: |
+      ls -R $(build.artifactstagingdirectory)
+    displayName: "List contents of the artifact staging directory"
+
   - task: CopyFiles@2
     inputs:
       Contents: "**/package.json"
