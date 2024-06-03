@@ -23,7 +23,7 @@ steps:
       npx playwright install --with-deps
     displayName: "Install Playwright"
 
-      - script: |
+  - script: |
       npm test
     displayName: "npm test"
 
