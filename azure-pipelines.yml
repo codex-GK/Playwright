@@ -28,10 +28,6 @@ steps:
     displayName: "npm test"
 
   - script: |
-      npx playwright test
-    displayName: "Run Playwright tests"
-
-  - script: |
       npx playwright test --reporter = html
     displayName: "Generate Playwright Reports"
 
