@@ -25,6 +25,7 @@ steps:
 
   - script: |
       npm test --reporter=html --output=playwright-html-report
+      ls -la playwright-html-report
     displayName: "npm test"
 
   - task: CopyFiles@2
