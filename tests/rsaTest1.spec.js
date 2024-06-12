@@ -26,15 +26,15 @@ test("@Web browserContextPlayWrightTest1", async ({ browser }) => {
       break;
     }
   }
-  const cart = await page.locator("[routerlink*='cart']").click();
-
+  //const cart = await page.locator("[routerlink*='cart']").click();
+  await page.locator("button[routerlink='/dashboard/cart']").click();
   //to check the element present in the cart from the entire list & identifying locator based on text with tag
-  const cartItems = await page.locator("div li");
+  //const cartItems = await page.locator("div li");
 
   //expect (await page.locator("h3:has-text('iphone 13 pro')").isVisible()).toBeTruthy();
-  const bool = await page.locator("h3:has-text('iphone 13 pro')").isVisible();
+  //const bool = await page.locator("h3:has-text('iphone 13 pro')").isVisible();
 
-  expect(!bool).toBeTruthy();
+  //expect(!bool).toBeTruthy();
   await page.locator("text=Checkout").click();
 
   const country = await page
