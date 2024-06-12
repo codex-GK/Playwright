@@ -28,6 +28,7 @@ test("@Web browserContextPlayWrightTest1", async ({ browser }) => {
   }
   //const cart = await page.locator("[routerlink*='cart']").click();
   await page.locator("button[routerlink='/dashboard/cart']").click();
+  console.log("Failing the code for testing");
   //to check the element present in the cart from the entire list & identifying locator based on text with tag
   //const cartItems = await page.locator("div li");
 
