@@ -38,8 +38,9 @@ steps:
   - task: PublishTestResults@2
     displayName: "Publish test results"
     inputs:
-      searchFolder: "playwright-report" # Update to point to your HTML report folder
-      testResultsFormat: "HTML"
+      searchFolder: "test-results" # Update to point to your HTML report folder
+      testResultsFormat: "JUnit"
+      testResultsFiles: "e2e-junit-results.xml"
       mergeTestResults: true # Set to true if you have multiple test result files to merge
       failTaskOnFailedTests: true
       testRunTitle: "My End-To-End Tests"

@@ -26,7 +26,7 @@ const config = {
     //headless: false,
     headless: true,
     screenshot: "on",
-    trace: "retain-on-failure",
+    trace: "on",
 
     //browserName : 'webkit'
   },
